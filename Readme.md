@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Георгий  Дебрин](https://up.htmlacademy.ru/htmlcss/35/user/2113119).
-* Наставник: `Неизвестно`.
+- Студент: [Георгий Дебрин](https://up.htmlacademy.ru/htmlcss/35/user/2113119).
+- Наставник: Роман Желтов (https://htmlacademy.ru/profile/id1145037).
 
 ---
 
