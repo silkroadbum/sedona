@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -22,14 +30,37 @@ body {
   background-color: #F2F2F2;
 }
 
+.main-index,
+.main-inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
 /* Хедер и навигация */
 .page-header {
+  width: 1200px;
   background-color: #ffffff;
   display: flex;
+  margin: 0 auto;
 }
 
 .navigation {
   display: flex;
+}
+
+.navigation-list {
+  width: 339px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  width: 268px;
+  margin-left: auto;
 }
 
 .navigation-link {
@@ -126,6 +157,8 @@ body {
 
 /* Блок преимуществ */
 .advantages-list {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -323,8 +356,18 @@ body {
 
 /* footer */
 .page-footer {
+  width: 1200px;
   display: flex;
   background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.footer-social {
+  width: 142px;
+}
+
+.footer-contacts {
+  width: 331px;
 }
 
 .footer-contacts-phone {
@@ -335,4 +378,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.footer-htmlacademy {
+  width: 115px;
 }
