@@ -19,9 +19,7 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -30,10 +28,12 @@ body {
   background-color: #F2F2F2;
 }
 
-.main-index,
-.main-inner {
+.container {
   width: 1200px;
+  min-height: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-container {
@@ -42,14 +42,21 @@ body {
 
 /* Хедер и навигация */
 .page-header {
-  width: 1200px;
-  background-color: #ffffff;
   display: flex;
-  margin: 0 auto;
+  background-color: #ffffff;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.navigation-logo {
+  display: block;
+  width: 138px;
+  margin-right: 30px;
 }
 
 .navigation {
   display: flex;
+  flex-grow: 1;
 }
 
 .navigation-list {
@@ -120,8 +127,7 @@ body {
 
 /* Hero блок */
 .welcome {
-  width: 1200px;
-  height: 485px;
+  min-height: 485px;
   background-image: url("../images/index-background.jpg");
   background-color: #000000;
   background-size: 100% auto;
@@ -135,7 +141,6 @@ body {
 
 /* Блок описания */
 .description {
-  width: 1200px;
   min-height: 282px;
   text-align: center;
   background-color: #ffffff;
@@ -160,12 +165,13 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .advantages-item-block {
   width: 400px;
-  height: 384px;
+  min-height: 384px;
   background-color: #82B3D3;
   text-align: center;
 }
@@ -224,7 +230,6 @@ body {
 
 /* Блок подписки */
 .main-subscribe {
-  width: 1200px;
   min-height: 415px;
   background-image: url("../images/subscribe-background.jpg");
   background-color: #000000;
@@ -255,7 +260,6 @@ body {
 
 /* Блок хедера в основном содержимом страницы каталога */
 .background-for-catalog {
-  width: 1200px;
   min-height: 412px;
   background-image: url("../images/catalog-background.jpg");
   background-color: #000000;
@@ -300,7 +304,6 @@ body {
 }
 
 /* Поле сортировки и вида товаров */
-
 .hotels-found-title {
   font-weight: 700;
   font-size: 30px;
@@ -316,7 +319,6 @@ body {
 }
 
 /* Блок карточки товара */
-
 .hotels-found-list {
   background-color: #ffffff;
 }
@@ -344,7 +346,6 @@ body {
 }
 
 /* Пагинация */
-
 .pagination-link.button {
   background-color: #82B3D3;
 }
@@ -356,18 +357,25 @@ body {
 
 /* footer */
 .page-footer {
-  width: 1200px;
   display: flex;
   background-color: #ffffff;
-  margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .footer-social {
   width: 142px;
+  margin-right: 42px;
+}
+
+.footer-social-list {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-contacts {
-  width: 331px;
+  width: 720px;
+  text-align: center;
 }
 
 .footer-contacts-phone {
@@ -382,4 +390,5 @@ body {
 
 .footer-htmlacademy {
   width: 115px;
+  margin-left: auto;
 }
