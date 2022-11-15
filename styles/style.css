@@ -14,6 +14,12 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -26,6 +32,11 @@ body {
   line-height: 21px;
   color: #000000;
   background-color: #F2F2F2;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .container {
@@ -265,6 +276,8 @@ body {
   background-color: #000000;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .inner-header {
@@ -287,6 +300,7 @@ body {
 }
 
 .catalog-filter {
+  display: flex;
   color: #ffffff;
 }
 
@@ -304,6 +318,11 @@ body {
 }
 
 /* Поле сортировки и вида товаров */
+.hotels-found-list {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
 .hotels-found-title {
   font-weight: 700;
   font-size: 30px;
