@@ -39,6 +39,17 @@ img {
   object-fit: contain;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   min-height: 100%;
@@ -71,17 +82,17 @@ img {
 }
 
 .navigation-list {
-  width: 339px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 465px;
   margin: 0;
   padding: 0;
-}
-
-.navigation-user {
-  width: 268px;
-  margin-left: auto;
+  list-style-type: none;
 }
 
 .navigation-link {
+  display: block;
+  padding: 20px 16px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -89,6 +100,16 @@ img {
   text-align: center;
   text-decoration: none;
   text-transform: capitalize;
+}
+
+.navigation-user {
+  width: 268px;
+  margin-left: auto;
+}
+
+.navigation-user .navigation-link {
+  min-width: 20px;
+  min-height: 20px;
 }
 
 /* Кнопки */
@@ -138,26 +159,33 @@ img {
 
 /* Hero блок */
 .welcome {
+  position: relative;
   min-height: 485px;
   background-image: url("../images/index-background.jpg");
   background-color: #000000;
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
+  padding-top: 51px;
 }
 
 .welcome-divider {
   display: block;
+  position: absolute;
+  bottom: 0;
 }
 
 /* Блок описания */
 .description {
-  min-height: 282px;
   text-align: center;
   background-color: #ffffff;
+  padding-top: 69px;
+  padding-bottom: 90px;
 }
 
 .description .description-statement {
+  margin-top: 0;
+  margin-bottom: 25px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -165,6 +193,7 @@ img {
 }
 
 .description .description-reasons {
+  margin: 0;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -178,9 +207,12 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .advantages-item-block {
+  padding-top: 92px;
+  padding-bottom: 81px;
   width: 400px;
   min-height: 384px;
   background-color: #82B3D3;
@@ -188,6 +220,8 @@ img {
 }
 
 .advantages-title {
+  margin-top: 0;
+  margin-bottom: 62px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -195,6 +229,7 @@ img {
 }
 
 .advantages-description {
+  margin: 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -226,21 +261,43 @@ img {
   background-color: #ffffff;
 }
 
+.advantages-list:last-child .advantages-item-block{
+  padding-top: 182px;
+}
+
+.advantages-list:last-child .advantages-title {
+  margin-bottom: 30px;
+}
+
 /* Блок предложения */
 .suggestions {
+  padding-top: 96px;
+  padding-bottom: 96px;
   background-color: white;
   text-align: center;
 }
 
 .suggestions-statement {
+  margin-top: 0;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
 
+.suggestions-description {
+  margin: 0;
+  margin-bottom: 54px;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+
 /* Блок подписки */
 .main-subscribe {
+  padding-top: 96px;
+  padding-bottom: 104px;
   min-height: 415px;
   background-image: url("../images/subscribe-background.jpg");
   background-color: #000000;
@@ -251,6 +308,8 @@ img {
 }
 
 .subscribe-title {
+  margin-top: 0;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -258,6 +317,8 @@ img {
 }
 
 .subscribe-description {
+  margin: 0;
+  margin-bottom: 54px;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -271,6 +332,7 @@ img {
 
 /* Блок хедера в основном содержимом страницы каталога */
 .background-for-catalog {
+  padding-top: 35px;
   min-height: 412px;
   background-image: url("../images/catalog-background.jpg");
   background-color: #000000;
@@ -281,22 +343,40 @@ img {
 }
 
 .inner-header {
+  margin-bottom: 40px;
   color: #ffffff;
 }
 
 .inner-header .inner-header-title {
+  margin-top: 0;
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
 }
 
-.breadcrumbs .breadcrumbs-link {
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs-link {
+  margin-right: 28px;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
+}
+
+.breadcrumbs-link-home {
+  display: block;
+  min-width: 13px;
+  min-height: 15px;
 }
 
 .catalog-filter {
@@ -318,16 +398,29 @@ img {
 }
 
 /* Поле сортировки и вида товаров */
-.hotels-found-list {
-  padding-left: 70px;
-  padding-right: 70px;
+
+.sorting-container {
+  display: flex;
+  margin-bottom: 40px;
 }
 
-.hotels-found-title {
+.sorting-found-title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+}
+
+.sorting-container .button {
+  width: 48px;
+  height: 48px;
+}
+
+.hotels-found-list {
+  padding: 50px 70px 60px;
+  background-color: #ffffff;
 }
 
 .select-controls {
@@ -338,8 +431,11 @@ img {
 }
 
 /* Блок карточки товара */
-.hotels-found-list {
-  background-color: #ffffff;
+.product-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 120px;
 }
 
 .product-card-link {
@@ -365,6 +461,36 @@ img {
 }
 
 /* Пагинация */
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination-link {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  padding: 12px 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  background-color: #82B3D3;
+  text-decoration: none;
+}
+
+.pagination-clear {
+  color: #000000;
+  background-color: transparent;
+}
+
 .pagination-link.button {
   background-color: #82B3D3;
 }
@@ -378,18 +504,25 @@ img {
 .page-footer {
   display: flex;
   background-color: #ffffff;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding: 40px 70px 30px;
 }
 
 .footer-social {
-  width: 142px;
+  width: 144px;
   margin-right: 42px;
 }
 
 .footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+}
+
+.footer-social-item {
+  width: 48px;
+  height: 40px;
 }
 
 .footer-contacts {
