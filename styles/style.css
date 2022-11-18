@@ -441,12 +441,25 @@ img {
   margin-bottom: 120px;
 }
 
+.product-card {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+}
+
 .product-card-link {
+  display: grid;
+  row-gap: 16px;
+  grid-column: 1 / -1;
   color: #000000;
   text-decoration: none;
 }
 
 .product-card-title {
+  margin: 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
